@@ -5,15 +5,15 @@ header {
 h1 {
   font-size: 48px;
   color: rgb(71, 62, 62);
-  margin: 10px 0;
+  margin: 12px 0;
 }
 /*
     여백 겹침(margin collapsing)
     : 수직으로 인접된 요소 사이 여백이 겹치는 경우 두 요소 사이의 정의된 여백 중 더 큰 쪽이 적용됨
       예로 h1 요소의 margin이 12px, 그 바로 밑의 요소의 margin이 36px로 겹칠 경우 두 요소 사이의 간격은 36px
 */
-#desription {
-  margin-bottom: 12px 0; 
+#description {
+  margin: 8px;
 }
 
 a {
@@ -42,7 +42,7 @@ ol {
 li {
   padding: 16px; 
   margin: 32px;
-  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   background-color: rgb(223, 136, 124);
   border-radius: 6px;
 }
