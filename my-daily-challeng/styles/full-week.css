@@ -7,24 +7,29 @@ h1 {
   color: rgb(71, 62, 62);
   margin: 12px 0;
 }
-/*
+/***
     여백 겹침(margin collapsing)
     : 수직으로 인접된 요소 사이 여백이 겹치는 경우 두 요소 사이의 정의된 여백 중 더 큰 쪽이 적용됨
       예로 h1 요소의 margin이 12px, 그 바로 밑의 요소의 margin이 36px로 겹칠 경우 두 요소 사이의 간격은 36px
-*/
+ ***/
 #description {
   margin: 8px;
 }
 
 a {
-  padding: 12px 48px; /* inline element에서는 margin 혹은 padding속성으로 다른 요소와의 거리에 영향을 끼칠 수 없음 */ 
+  /*** 
+     inline 요소는 width, height 속성이 무시되며, margin, padding속성으로 상하 간격이 적용되지 않음(좌, 우 간격 가능).
+     inline 요소는 Content의 길이가 길어질 때 넓어지고, inline 요소가 화면에서 줄바꿈될 때마다 높이가 결정되기 때문.
+     해당 inline 특성은 display: inline-block; 혹은 display: block;을 사용하여 해결 가능.
+   ***/
+  padding: 12px 48px;
+  margin: 12px 0;
+  display: inline-block; /* inline 요소처럼 한 줄에 나란히 배치되나, block 요소처럼 width, hight 속성 지정 및 여백 상하 간격 지정 가능 */
   background-color: rgb(167, 1, 78);
   color: white;
   border: 1px solid rgb(167, 1, 78);
   border-radius: 4px;
   font-size: 24px;
-  display: inline-block;
-  margin: 12px 0;
 }
 
 a:hover {
@@ -37,6 +42,12 @@ ol {
   width: 500px;
   margin: 36px auto 0 auto; /* 좌우 auto를 통해 목록 가운데 정렬*/
   padding: 0;
+}
+
+ul {
+  /*** 브라우저 화면에 특정 요소 숨기기 ***/
+  display: none;        /* 브라우저 화면에 보이지 않으며 공간도 차지하지 않음 */
+  /*visibility: hidden; /* 브라우저 화면에서 보이지 않으나 공간을 차지 */
 }
 
 li {
