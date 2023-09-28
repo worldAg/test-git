@@ -1,27 +1,31 @@
 <!DOCTYPE html> <!-- HTML Version -->
 <html lang="en">
   <head> <!-- Page Metadata -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.gstatic.com" /> <!-- 빈 태그(Empty Tag) - Closing Tag와 Content 없음) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Oswald:wght@700&display=swap"
       rel="stylesheet"
     />
-  <!-- 
-    공유되는 css 파일을 먼저 가져오고, 
-    필요할 경우 두 번째 파일이 첫 번째 파일(공유되는 CSS)의 style 일부를 재정의하도록 하기 위해
-    파일의 작성 순서 중요 -->
+    <!-- 
+      공유되는 css 파일을 먼저 가져오고, 
+      필요할 경우 두 번째 파일이 첫 번째 파일(공유되는 CSS)의 style 일부를 재정의하도록 하기 위해
+      파일의 작성 순서 중요 -->
     <link rel="stylesheet" href="styles/shared.css" />
     <link rel="stylesheet" href="styles/daily-challenge.css" />
     <title>My Daily Challenge</title>
   </head>
   <body> <!-- Page Content -->
-    <img src="images/challenges-trophy.jpg" alt="A trophy"> <!-- img태그의 alt속성의 값은 fallback 텍스트. 더불어 스크린 리더 사용자가 해당 이미지가 무엇인지 파악할 수 있는 텍스트. -->
-    <h1>Max' Challenge for Wednesday, August 4th</h1>
-    <p id="todays-challenge">
-      Learn about the basics of web development - specifically dive into HTML &
-      CSS.
-    </p>
-    <p>Explore the <a href="full-week.html">full week</a>.</p>
+    <main>
+      <img src="images/challenges-trophy.jpg" alt="A trophy" /> <!-- img태그의 alt속성의 값은 fallback 텍스트. 더불어 스크린 리더 사용자가 해당 이미지가 무엇인지 파악할 수 있는 텍스트. -->
+      <h1>Max' Challenge for <span>Wednesday, August 4th</span></h1>
+      <p id="todays-challenge">
+        Learn about the basics of web development - specifically dive into HTML
+        & CSS.
+      </p>
+    </main>
+    <footer>
+      <p>Explore the <a href="full-week.html">full week</a>.</p>
+    </footer>
   </body>
 </html>
